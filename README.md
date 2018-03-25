@@ -1,6 +1,6 @@
 # d3-learn
 
-[D3 - Data-Driven Documents](https://d3js.org/)
+[GitHub page of this repository](https://hkpeterpeter.github.io/d3-learn/)
 
 **All notes/tutorials are updated to d3 (v5)**
 
