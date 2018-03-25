@@ -12,6 +12,3 @@ package-lock.json
 
 # dependencies
 /node_modules
-
-# babel intermediates
-dist/
