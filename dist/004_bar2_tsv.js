@@ -20,7 +20,7 @@ var chart = d3.select(".chart").attr("width", width);
 /**
  * Note #1
  */
-d3.tsv("data.tsv", type).then(function (data) {
+d3.tsv("tsv/data_004_bar2_tsv.tsv", type).then(function (data) {
     console.log(data);
 
     x.domain([0, d3.max(data, function (d) {

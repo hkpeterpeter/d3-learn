@@ -22,7 +22,7 @@ const chart = d3.select(".chart")
 /**
  * Note #1
  */
-d3.tsv("data.tsv", type).then( data => {
+d3.tsv("tsv/data_004_bar2_tsv.tsv", type).then( data => {
     console.log(data);
 
     x.domain([0, d3.max( data, d => d.value )]);
