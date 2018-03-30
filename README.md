@@ -16,6 +16,7 @@ Notes of learning d3 library
 - 3 circles example | [HTML](006_3circles.html) | [JS](006_3circles.js)
 - Grouped Bar Chart | [HTML](007_groupedbar.html) | [JS](007_groupedbar.js) | [Data](tsv/data_007_groupedbar.csv)
 - Line Chart | [HTML](008_linechart.html) | [JS](008_linechart.js) | [Data](tsv/data_008_linechart.tsv)
+- Area Chart | [HTML](009_areachart.html) | [JS](009_areachart.js) | Using the same dataset as line chart
 
 
 Comments and suggestions are welcome.
