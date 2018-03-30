@@ -18,6 +18,6 @@ Notes of learning d3 library
 - Line Chart | [HTML](008_linechart.html) | [JS](008_linechart.js) | [Data](tsv/data_008_linechart.tsv)
 - Area Chart | [HTML](009_areachart.html) | [JS](009_areachart.js) | Using the same dataset as line chart
 - Stacked bar chart | [HTML](010_stacked_barchart.html) | [JS](010_stacked_barchart.js) | [Data](tsv/data_010_stacked_barchart.csv)
-
+- Pie Chart | [HTML](011_piechart.html) | [JS](011_piechart.js) | [Data](tsv/data_011_piechart.csv)
 
 Comments and suggestions are welcome.
