@@ -17,6 +17,7 @@ Notes of learning d3 library
 - Grouped Bar Chart | [HTML](007_groupedbar.html) | [JS](007_groupedbar.js) | [Data](tsv/data_007_groupedbar.csv)
 - Line Chart | [HTML](008_linechart.html) | [JS](008_linechart.js) | [Data](tsv/data_008_linechart.tsv)
 - Area Chart | [HTML](009_areachart.html) | [JS](009_areachart.js) | Using the same dataset as line chart
+- Stacked bar chart | [HTML](010_stacked_barchart.html) | [JS](010_stacked_barchart.js) | [Data](tsv/data_010_stacked_barchart.csv)
 
 
 Comments and suggestions are welcome.
