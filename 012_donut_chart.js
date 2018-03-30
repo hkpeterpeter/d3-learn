@@ -1,5 +1,7 @@
 /**
- * Reference: https://bl.ocks.org/mbostock/3887235
+ * Reference: https://bl.ocks.org/mbostock/3887193
+ *
+ * Basically, the same as piechart, except the path
  */
 
 const svgWidth = 960;
@@ -24,13 +26,16 @@ const pie = d3.pie()
     .value(d => d.population);
 
 const path = d3.arc()
+    //.outerRadius(radius - 10)
+    //.innerRadius(0);
     .outerRadius(radius - 10)
-    .innerRadius(0);
+    .innerRadius(radius - 70);
 
 
 const label = d3.arc()
     .outerRadius(radius - 40)
     .innerRadius(radius - 40);
+
 
 
 d3.csv("tsv/data_011_piechart.csv", d => {
