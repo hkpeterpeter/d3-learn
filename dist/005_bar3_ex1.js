@@ -11,7 +11,11 @@ var chart = d3.select(".chart").attr("width", width).attr("height", height);
 
 var y = d3.scaleLinear().range([height, 0]);
 
-d3.tsv("tsv/data_005_bar3_ex1.tsv", type).then(function (data) {
+d3.tsv("tsv/data_005_bar3_ex1.tsv", function (d) {
+
+    d.value = +d.value; // text => value
+    return d;
+}).then(function (data) {
 
     // set the data domain
     //  [0 ... max data value]
@@ -40,9 +44,4 @@ d3.tsv("tsv/data_005_bar3_ex1.tsv", type).then(function (data) {
         return d.value;
     });
 });
-
-function type(d) {
-    d.value = +d.value; // coerce to number
-    return d;
-}
 //# sourceMappingURL=005_bar3_ex1.js.map

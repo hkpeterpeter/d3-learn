@@ -20,7 +20,10 @@ var chart = d3.select(".chart").attr("width", width);
 /**
  * Note #1
  */
-d3.tsv("tsv/data_004_bar2_tsv.tsv", type).then(function (data) {
+d3.tsv("tsv/data_004_bar2_tsv.tsv", function (d) {
+    d.value = +d.value;
+    return d;
+}).then(function (data) {
     console.log(data);
 
     x.domain([0, d3.max(data, function (d) {
@@ -46,9 +49,4 @@ d3.tsv("tsv/data_004_bar2_tsv.tsv", type).then(function (data) {
         return d.name;
     });
 });
-
-function type(d) {
-    d.value = +d.value; // coerce to number
-    return d;
-}
 //# sourceMappingURL=004_bar2_tsv.js.map

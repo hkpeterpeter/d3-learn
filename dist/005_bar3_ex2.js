@@ -21,7 +21,8 @@ var y = d3.scaleLinear().range([height, 0]);
 var g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 d3.tsv("tsv/data_005_bar3_ex2.tsv", function (d) {
-    d.frequency = +d.frequency;
+
+    d.frequency = +d.frequency; // text => value
     return d;
 }).then(function (data) {
 

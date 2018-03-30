@@ -29,13 +29,4 @@ bar.append("text").attr("x", function (d) {
 });
 
 bar.append("text").attr("x", "1em").attr("y", barHeight / 2).attr("dy", ".35em").text("" + 0);
-
-/*
-d3.tsv("data.tsv", (error, data) => {
-
-    //console.log(data);
-    //console.log(typeof data);
-    // console.log(data.length);
-});
-*/
 //# sourceMappingURL=003_bar2.js.map

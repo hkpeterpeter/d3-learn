@@ -13,7 +13,12 @@ const chart = d3.select(".chart")
 const y = d3.scaleLinear()
     .range([height, 0]);
 
-d3.tsv("tsv/data_005_bar3_ex1.tsv", type).then( data => {
+d3.tsv("tsv/data_005_bar3_ex1.tsv", d => {
+
+    d.value = +d.value; // text => value
+    return d;
+
+}).then( data => {
 
     // set the data domain
     //  [0 ... max data value]
@@ -41,8 +46,3 @@ d3.tsv("tsv/data_005_bar3_ex1.tsv", type).then( data => {
         .text( d => d.value );
 
 });
-
-function type(d) {
-    d.value = +d.value; // coerce to number
-    return d;
-}

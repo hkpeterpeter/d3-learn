@@ -27,7 +27,8 @@ const g = svg.append("g")
 
 
 d3.tsv("tsv/data_005_bar3_ex2.tsv", d => {
-    d.frequency = +d.frequency;
+
+    d.frequency = +d.frequency; // text => value
     return d;
 
 }).then(data => {
