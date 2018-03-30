@@ -11,7 +11,7 @@ const chart = d3.select(".chart")
             .attr("height", height);
 
 const y = d3.scaleLinear()
-    .range([0, height]); // this scale is easier to understand
+    .range([height, 0]);
 
 d3.tsv("tsv/data_005_bar3_ex1.tsv", type).then( data => {
 
@@ -29,14 +29,14 @@ d3.tsv("tsv/data_005_bar3_ex1.tsv", type).then( data => {
 
     bar.append("rect")
         .attr("x", (d,i) => i*barWidth)
-        .attr("y", d => height - y(d.value))  // compare: d => 0
-        .attr("height", d => y(d.value))
+        .attr("y", d =>  y(d.value))
+        .attr("height", d => height - y(d.value))
         .attr("width", barWidth-1);
 
 
     bar.append("text")
         .attr("x", (d,i) => i*barWidth + barWidth/2)
-        .attr("y", d => height - y(d.value) + 3)
+        .attr("y", d => y(d.value) + 3)
         .attr("dy", ".75em")
         .text( d => d.value );
 

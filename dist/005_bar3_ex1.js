@@ -9,7 +9,7 @@ var height = 500;
 
 var chart = d3.select(".chart").attr("width", width).attr("height", height);
 
-var y = d3.scaleLinear().range([0, height]); // this scale is easier to understand
+var y = d3.scaleLinear().range([height, 0]);
 
 d3.tsv("tsv/data_005_bar3_ex1.tsv", type).then(function (data) {
 
@@ -27,16 +27,15 @@ d3.tsv("tsv/data_005_bar3_ex1.tsv", type).then(function (data) {
     bar.append("rect").attr("x", function (d, i) {
         return i * barWidth;
     }).attr("y", function (d) {
-        return height - y(d.value);
-    }) // compare: d => 0
-    .attr("height", function (d) {
         return y(d.value);
+    }).attr("height", function (d) {
+        return height - y(d.value);
     }).attr("width", barWidth - 1);
 
     bar.append("text").attr("x", function (d, i) {
         return i * barWidth + barWidth / 2;
     }).attr("y", function (d) {
-        return height - y(d.value) + 3;
+        return y(d.value) + 3;
     }).attr("dy", ".75em").text(function (d) {
         return d.value;
     });
