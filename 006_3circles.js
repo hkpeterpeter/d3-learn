@@ -30,7 +30,7 @@ document.getElementById("btnEnterElements").onclick = e => {
         .data([32,57,112,293])
         .enter().append("circle")
         .attr("cy", 60)
-        .attr("r", d => Math.sqrt(d))
+        .attr("r", d => Math.sqrt (d))
         .attr("cx", (d,i) => i * 100 + 30)
             .merge(circle);   // breaking change since v4.0
 
@@ -46,7 +46,7 @@ document.getElementById("btnRemoveElements").onclick = e => {
 document.getElementById("btnGeneralPattern").onclick = e => {
 
     // The general pattern:
-    const num = Math.floor(Math.random() * 10) + 2; // 2..11
+    const num = Math.floor(Math.random() * 4) + 2; // 2..5
     const data = [];
     for (let i = 0; i<num; i++)
         data.push(  Math.floor(Math.random() * 100)  );
@@ -58,12 +58,17 @@ document.getElementById("btnGeneralPattern").onclick = e => {
     // Handling data addition
     circle.enter().append("circle")
         .attr("cy", 60)
-        .attr("r", d => Math.sqrt(d))
         .attr("cx", (d,i) => i * 100 + 30)
-        .merge(circle);   // breaking change since v4.0
+
+        .merge(circle)  // breaking change since v4.0
+        .attr("r", 0)
+        .transition()
+        .attr("r", d => Math.sqrt(d))
 
     // Handling data removal
     circle.exit()
+        .transition()
+        .attr("r", 0)
         .remove();
 
 

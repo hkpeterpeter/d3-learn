@@ -41,7 +41,7 @@ document.getElementById("btnRemoveElements").onclick = function (e) {
 document.getElementById("btnGeneralPattern").onclick = function (e) {
 
     // The general pattern:
-    var num = Math.floor(Math.random() * 10) + 2; // 2..11
+    var num = Math.floor(Math.random() * 4) + 2; // 2..5
     var data = [];
     for (var i = 0; i < num; i++) {
         data.push(Math.floor(Math.random() * 100));
@@ -51,13 +51,14 @@ document.getElementById("btnGeneralPattern").onclick = function (e) {
     });
 
     // Handling data addition
-    circle.enter().append("circle").attr("cy", 60).attr("r", function (d) {
-        return Math.sqrt(d);
-    }).attr("cx", function (d, i) {
+    circle.enter().append("circle").attr("cy", 60).attr("cx", function (d, i) {
         return i * 100 + 30;
-    }).merge(circle); // breaking change since v4.0
+    }).merge(circle) // breaking change since v4.0
+    .attr("r", 0).transition().attr("r", function (d) {
+        return Math.sqrt(d);
+    });
 
     // Handling data removal
-    circle.exit().remove();
+    circle.exit().transition().attr("r", 0).remove();
 };
 //# sourceMappingURL=006_3circles.js.map
