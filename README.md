@@ -19,6 +19,8 @@ Notes of learning d3 library
 - BartChart (Part 3)
   - Example 1: [HTML](005_bar3_ex1.html) | [JS](005_bar3_ex1.js) | [Data](tsv/data_005_bar3_ex1.tsv)
   - Example 2: [HTML](005_bar3_ex2.html) | [JS](005_bar3_ex2.js) | [Data](tsv/data_005_bar3_ex2.tsv)
+- 3 circles example
+  - [HTML](006_3circles.html) | [JS](006_3circles.js)
 
 
 Comments and suggestions are welcome.
